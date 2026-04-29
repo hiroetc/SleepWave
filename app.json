@@ -9,21 +9,26 @@
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#1a1a2e"
+      "backgroundColor": "#1a0510"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.hiroetc.sleepwave"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#1a1a2e"
+        "backgroundColor": "#4f0c28"
       },
+      "package": "com.hiroetc.sleepwave",
       "permissions": [
+        "android.permission.RECEIVE_BOOT_COMPLETED",
+        "android.permission.VIBRATE",
+        "android.permission.USE_EXACT_ALARM",
+        "android.permission.SCHEDULE_EXACT_ALARM",
         "android.permission.RECORD_AUDIO",
         "android.permission.MODIFY_AUDIO_SETTINGS"
-      ],
-      "package": "com.hiroetc.sleepwave"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -35,7 +40,14 @@
           "microphonePermission": "Uyku sesleri için izin gerekiyor."
         }
       ],
-      "expo-mail-composer"
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/icon.png",
+          "color": "#4f0c28",
+          "sounds": []
+        }
+      ]
     ],
     "extra": {
       "eas": {
