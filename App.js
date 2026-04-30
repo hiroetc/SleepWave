@@ -5,7 +5,6 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { C } from './src/styles';
 
 import HomeScreen from './src/screens/HomeScreen';
-import AlarmScreen from './src/screens/AlarmScreen';
 import StatsScreen from './src/screens/StatsScreen';
 import SocialScreen from './src/screens/SocialScreen';
 import BabyScreen from './src/screens/BabyScreen';
@@ -13,11 +12,10 @@ import BabyScreen from './src/screens/BabyScreen';
 const Tab = createBottomTabNavigator();
 
 const TABS = [
-  { name: 'Ana',        component: HomeScreen,   emoji: '🌙' },
-  { name: 'Alarm',      component: AlarmScreen,  emoji: '⏰' },
-  { name: 'İstatistik', component: StatsScreen,  emoji: '📊' },
+  { name: 'Ana',        component: HomeScreen,  emoji: '🌙' },
+  { name: 'İstatistik', component: StatsScreen, emoji: '📊' },
   { name: 'Günlük',     component: SocialScreen, emoji: '📓' },
-  { name: 'Bebek',      component: BabyScreen,   emoji: '🍼' },
+  { name: 'Bebek',      component: BabyScreen,  emoji: '🍼' },
 ];
 
 export default function App() {
@@ -48,12 +46,7 @@ export default function App() {
                 <Text style={{ fontSize: 16, lineHeight: 20 }}>{tab.emoji}</Text>
               ),
               tabBarLabel: ({ focused }) => (
-                <Text style={{
-                  fontSize: 9,
-                  fontWeight: focused ? '600' : '400',
-                  color: focused ? C.accent : C.dim,
-                  lineHeight: 13,
-                }}>
+                <Text style={{ fontSize: 9, fontWeight: focused ? '600' : '400', color: focused ? C.accent : C.dim, lineHeight: 13 }}>
                   {tab.name}
                 </Text>
               ),

@@ -36,10 +36,14 @@ export const getLogsForPeriod = async (period) => {
       return logDate >= weekAgo;
     }
     if (period === 'ay') {
-      return logDate.getMonth() === now.getMonth() && logDate.getFullYear() === now.getFullYear();
+      const monthAgo = new Date(now);
+      monthAgo.setDate(now.getDate() - 30);
+      return logDate >= monthAgo;
     }
     if (period === 'yıl') {
-      return logDate.getFullYear() === now.getFullYear();
+      const yearAgo = new Date(now);
+      yearAgo.setFullYear(now.getFullYear() - 1);
+      return logDate >= yearAgo;
     }
     return true;
   });

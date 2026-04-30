@@ -9,7 +9,7 @@
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#1a0510"
+      "backgroundColor": "#171219"
     },
     "ios": {
       "supportsTablet": true,
@@ -18,7 +18,7 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#4f0c28"
+        "backgroundColor": "#171219"
       },
       "package": "com.hiroetc.sleepwave",
       "permissions": [
@@ -44,8 +44,7 @@
         "expo-notifications",
         {
           "icon": "./assets/icon.png",
-          "color": "#4f0c28",
-          "sounds": []
+          "color": "#3d2a40"
         }
       ]
     ],
