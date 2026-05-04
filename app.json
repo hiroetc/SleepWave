@@ -26,9 +26,17 @@
         "android.permission.VIBRATE",
         "android.permission.USE_EXACT_ALARM",
         "android.permission.SCHEDULE_EXACT_ALARM",
+        "android.permission.FOREGROUND_SERVICE",
+        "android.permission.FOREGROUND_SERVICE_HEALTH",
         "android.permission.RECORD_AUDIO",
-        "android.permission.MODIFY_AUDIO_SETTINGS"
-      ]
+        "android.permission.MODIFY_AUDIO_SETTINGS",
+        "android.permission.WAKE_LOCK"
+      ],
+      "foregroundService": {
+        "notificationTitle": "SleepWave",
+        "notificationBody": "Uyku takibi devam ediyor...",
+        "notificationColor": "#171219"
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -46,7 +54,14 @@
           "icon": "./assets/icon.png",
           "color": "#3d2a40"
         }
-      ]
+      ],
+      [
+        "expo-task-manager"
+      ],
+      [
+        "expo-background-fetch"
+      ],
+      "expo-audio"
     ],
     "extra": {
       "eas": {
